@@ -1,1 +1,30 @@
-<p>nav works!</p>
+<mat-drawer-container class="container" autosize>
+    <mat-drawer #drawer class="sidenav" mode="side">
+        <img src="https://raw.githubusercontent.com/Mario23junior/MarsRover-API/main/doc/logo-marsrover.png" alt="">
+        <mat-nav-list class="nav-list">
+            <a mat-list-item routerLink="/">
+                 <i class="material-icons">home</i>
+                 Home
+            </a>
+            <a mat-list-item routerLink="/">
+                <i class="material-icons">collections</i>
+                Fotos de marte rover
+            </a>
+            <a mat-list-item routerLink="/">
+                <i class="material-icons">diversity_2</i>
+                Analise rover
+            </a>
+            <a mat-list-item routerLink="/">
+                <i class="material-icons">code</i>
+                Fonte API 
+            </a>
+        </mat-nav-list>
+    </mat-drawer>
+
+    <div class="sidenav-content">
+        <button class="manu" (click)="drawer.toggle()" mat-icon-button>
+             <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+
+</mat-drawer-container>
