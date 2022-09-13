@@ -1,0 +1,9 @@
+.card{
+    width: 90%;
+    margin: auto;
+    border-radius: 10pxs;
+}
+
+iframe {
+    height: 30rem;
+}
