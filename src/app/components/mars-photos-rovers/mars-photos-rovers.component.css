@@ -1,8 +1,39 @@
-.card{
-     margin: 1rem;
-    border-radius: 10pxs;
+.card {
+
+    margin: 1rem;
+    border-radius: 10px;
 }
 
 img {
     width: 20rem;
+}
+
+.card-form {
+    margin: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.mat-button-toggle {
+    font-size: 18px;
+    font-weight: bold;
+    font-weight: 500;
+}
+
+.mat-radio-group {
+    align-items: center;
+    justify-content: center;
+}
+
+
+.example-form {
+    min-width: 50px;
+    max-width: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+.example-full-width {
+    width: 50%;
 }

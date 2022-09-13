@@ -31,6 +31,7 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MarsPhotosRoversComponent } from './components/mars-photos-rovers/mars-photos-rovers.component';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 // Componentes do projeto
 
@@ -67,8 +68,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatIconModule,
     MatListModule,
     MatCardModule,
-    MatGridListModule
-    
+    MatGridListModule,
+    MatButtonToggleModule
+
 
   ]
 

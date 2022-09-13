@@ -1,4 +1,49 @@
-<mat-grid-list cols="4" rowHeight="34rem" gutterSize="10px">
+<mat-card class="card-form">
+    <section>
+        <mat-button-toggle-group [(ngModel)]="fontStyle" aria-label="Font Style">
+            <mat-button-toggle value="curiosity">Curiosity</mat-button-toggle>
+            <mat-button-toggle value="opportunity">Opportunity</mat-button-toggle>
+            <mat-button-toggle value="spirit">Spirit</mat-button-toggle>
+        </mat-button-toggle-group>
+        <br><br>
+        <mat-card-content>
+            <mat-radio-group aria-label="Select an option">
+
+                <mat-radio-button value="fhaz">Câmera de prevenção de riscos frontais</mat-radio-button>
+                <br>
+                <mat-radio-button value="rhaz">Câmera traseira para prevenção de riscos</mat-radio-button>
+                <br>
+                <mat-radio-button value="mast">Mast camera</mat-radio-button>
+                <br>
+                <mat-radio-button value="chemcam">Química e complexo de câmeras</mat-radio-button>
+                <br>
+                <mat-radio-button value="mardi">Imager Descida de Marte</mat-radio-button>
+                <br>
+                <mat-radio-button value="mahli">Mars Hand Lens </mat-radio-button>
+                <br>
+                <mat-radio-button value="navcam">Câmera de Navegação</mat-radio-button>
+                <br>
+                <mat-radio-button value="minites">Espectrômetro de emissão térmica em miniatura (Mini-TES)
+                </mat-radio-button>
+            </mat-radio-group>
+            <br><br><br>
+        </mat-card-content>
+    </section> 
+
+    <form class="form">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Digite a quantidade de Sol de marte e obtenha os dados</mat-label>
+            <input matInput #message maxlength="256" placeholder="Ex. I need help with...">
+            <mat-hint align="start"><strong>Selecione dias em marte ate Ex:3000</strong> </mat-hint>
+            <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+        </mat-form-field>
+    </form><br>
+    <button mat-raised-button color="primary">Consultar</button>
+</mat-card>
+
+
+
+<mat-grid-list @fade cols="4" rowHeight="34rem" gutterSize="10px">
     <mat-grid-tile>
         <mat-card class="card">
             <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
