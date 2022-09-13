@@ -1,5 +1,5 @@
 import { MarsPhoto } from "./MarsPhoto.model";
 
- export class MarsRoverResponse {
-     photos: MarsPhoto[] = [];
+ export interface MarsRoverResponse {
+     photos: MarsPhoto[];
 }

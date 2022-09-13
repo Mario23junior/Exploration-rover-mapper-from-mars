@@ -1,13 +1,13 @@
 import { Cameras } from "./cameras.model";
 import { MarsRover } from "./marsRover.model";
 
-export class MarsPhoto {
-    id!: Number;
-    sol!: Number;
-    camera: Cameras[] = [];
+export interface MarsPhoto {
+    id: Number;
+    sol: Number;
+    camera: Cameras[];
 
-    img!: String;
+    img: String;
 
-    earth_date!: String;
-    rover: MarsRover[] = [];
+    earth_date: String;
+    rover: MarsRover[];
 }
