@@ -3,10 +3,10 @@
         <img src="https://raw.githubusercontent.com/Mario23junior/MarsRover-API/main/doc/logo-marsrover.png" alt="">
         <mat-nav-list class="nav-list">
             <a mat-list-item routerLink="home">
-                 <i class="material-icons">home</i>
-                 Home
+                <i class="material-icons">home</i>
+                Home
             </a>
-            <a mat-list-item routerLink="/">
+            <a mat-list-item routerLink="/roversPhotos">
                 <i class="material-icons">collections</i>
                 Fotos de marte rover
             </a>
@@ -16,7 +16,7 @@
             </a>
             <a mat-list-item routerLink="/">
                 <i class="material-icons">code</i>
-                Fonte API 
+                Fonte API
             </a>
         </mat-nav-list>
     </mat-drawer>
@@ -24,7 +24,7 @@
     <div class="sidenav-content">
         <app-header></app-header>
         <button class="manu" (click)="drawer.toggle()" mat-icon-button>
-             <mat-icon>menu</mat-icon>
+            <mat-icon>menu</mat-icon>
         </button>
         <router-outlet></router-outlet>
     </div>

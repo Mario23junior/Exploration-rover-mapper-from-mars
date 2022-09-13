@@ -29,6 +29,7 @@ import { MatCardModule } from '@angular/material/card';
 import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
+import { MarsPhotosRoversComponent } from './components/mars-photos-rovers/mars-photos-rovers.component';
 
 // Componentes do projeto
 
@@ -39,6 +40,7 @@ import { HeaderComponent } from './components/header/header.component';
     NavComponent,
     HomeComponent,
     HeaderComponent,
+    MarsPhotosRoversComponent,
   ],
   imports: [
     BrowserModule,
