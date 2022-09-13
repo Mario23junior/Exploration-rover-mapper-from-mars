@@ -30,6 +30,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MarsPhotosRoversComponent } from './components/mars-photos-rovers/mars-photos-rovers.component';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 // Componentes do projeto
 
@@ -66,6 +67,9 @@ import { MarsPhotosRoversComponent } from './components/mars-photos-rovers/mars-
     MatIconModule,
     MatListModule,
     MatCardModule,
+    MatGridListModule
+    
+
   ]
 
   ,
