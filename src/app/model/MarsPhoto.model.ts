@@ -5,9 +5,7 @@ export interface MarsPhoto {
     id: Number;
     sol: Number;
     camera: Cameras[];
-
     img: String;
-
     earth_date: String;
     rover: MarsRover[];
 }

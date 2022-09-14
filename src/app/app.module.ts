@@ -33,6 +33,10 @@ import { MarsPhotosRoversComponent } from './components/mars-photos-rovers/mars-
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
+import { MatDatepicker, MatDatepickerModule } from '@angular/material/datepicker';
+import { CdkMenuModule } from '@angular/cdk/menu';
+import { MatNativeDateModule } from '@angular/material/core';
+
 // Componentes do projeto
 
 
@@ -69,9 +73,11 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
     MatListModule,
     MatCardModule,
     MatGridListModule,
-    MatButtonToggleModule
-
-
+    MatButtonToggleModule,
+    MatDatepickerModule,
+    MatDatepickerModule,
+    CdkMenuModule,
+    MatNativeDateModule
   ]
 
   ,
