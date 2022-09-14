@@ -1,6 +1,6 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-mars-photos-rovers',
@@ -17,12 +17,36 @@ import { FormControl } from '@angular/forms';
 })
 export class MarsPhotosRoversComponent implements OnInit {
 
-  constructor() { }
+  public form: FormGroup
 
-  fontStyleControl = new FormControl('');
-  fontStyle?: string;
+  constructor(
+    public formBuild: FormBuilder
+  ) {
+    this.form = this.formBuild.group({
+      curiosity: [null],
+      opportunity: [null],
+      spirit: [null],
+      fhaz: [null],
+      mast: [null],
+      chemcam: [null],
+      hazcam: [null],
+      mardi: [null],
+      mahli: [null],
+      navcam: [null],
+      minites: [null],
+      solMars:[null]
+
+
+    })
+  }
+
 
   ngOnInit(): void {
   }
+
+  ConsultForDatePhoto() {
+    console.log(this.form.value)
+  }
+
 
 }
