@@ -24,15 +24,8 @@ export class MarsPhotosRoversComponent implements OnInit {
   ) {
     this.form = this.formBuild.group({
       robomars: [null],
-      fhaz: [null],
-      mast: [null],
-      chemcam: [null],
-      hazcam: [null],
-      mardi: [null],
-      mahli: [null],
-      navcam: [null],
-      minites: [null],
-      solMars: [null]
+      cameras: [null],
+      solMars: [null],
 
 
     })
