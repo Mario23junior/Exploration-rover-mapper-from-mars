@@ -8,13 +8,22 @@
         </mat-button-toggle-group>
         <br><br>
 
-        <mat-form-field appearance="fill">
-            <mat-label>Insira sua data Ex: 10/11/202</mat-label>
+        <!-- <mat-form-field appearance="fill">
+            <mat-label>Insira sua data Ex: 10/11/2020</mat-label>
             <input formControlName="date" placeholder="Digite a sua data" matInput [matDatepicker]="picker">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
-        </mat-form-field>
-        <br><br>
+        </mat-form-field> -->
+        <mat-form-field appearance="fill">
+            <mat-label>Moment.js datepicker</mat-label>
+            <input matInput [matDatepicker]="dp" formControlName="date">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+            <mat-datepicker #dp></mat-datepicker>
+          </mat-form-field>
+
+
+         <br><br>
 
         <mat-radio-group formControlName="cameras" aria-label="Select an option">
             <mat-radio-button value="fhaz">Câmera de prevenção de riscos frontais</mat-radio-button>

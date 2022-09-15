@@ -1,6 +1,9 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { MarsPhoto } from 'src/app/model/MarsPhoto.model';
+import { MarsRoverResponse } from 'src/app/model/marsRoverResponse';
+import { MarsRoverserviceService } from 'src/app/service/mars-roverservice.service';
 
 @Component({
   selector: 'app-mars-photos-rovers',
@@ -18,9 +21,12 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 export class MarsPhotosRoversComponent implements OnInit {
 
   public form: FormGroup
+  public data: MarsRoverResponse[] = []
 
   constructor(
-    public formBuild: FormBuilder
+    public formBuild: FormBuilder,
+    public service: MarsRoverserviceService
+
   ) {
     this.form = this.formBuild.group({
       robomars: [null],
@@ -30,14 +36,24 @@ export class MarsPhotosRoversComponent implements OnInit {
     })
   }
 
+  ConsultForDatePhoto() {
+
+    let roboRovesr = this.form.value.robomars
+    let data = this.form.value.date
+    let MarsCameras = this.form.value.cameras
+    let solMars = this.form.value.solMars
+    console.log(data)
+ 
+    this.service.findByDateBaseMars(roboRovesr, data, MarsCameras, solMars)
+      .subscribe(data => {
+        this.data = data
+        console.log(data)
+      })
+  }
+
+
 
   ngOnInit(): void {
   }
-
-
-  ConsultForDatePhoto() {
-    console.log(this.form.value)
-  }
-
 
 }

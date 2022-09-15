@@ -1,6 +1,7 @@
 export interface Cameras {
-    id: Number
-    name: String;
-    roverId: String;
-    fullName: String;
+    id: number
+    name: string;
+    roverId: string;
+    fullName: string;
 }
+
