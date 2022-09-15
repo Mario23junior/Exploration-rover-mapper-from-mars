@@ -10,12 +10,13 @@
 
         <mat-form-field appearance="fill">
             <mat-label>Insira sua data Ex: 10/11/2020</mat-label>
-            <input matInput [matDatepicker]="dp" placeholder="Digite a sua data em dias Terra para obter dados de marte" formControlName="date">
+            <input matInput [matDatepicker]="dp" placeholder="Digite a sua data em dias Terra para obter dados de marte"
+                formControlName="date">
             <mat-hint>Digite a sua data em dias Terra para obter dados de marte</mat-hint>
             <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
             <mat-datepicker #dp></mat-datepicker>
-          </mat-form-field>
-         <br><br>
+        </mat-form-field>
+        <br><br>
 
         <mat-radio-group formControlName="cameras" aria-label="Select an option">
             <mat-radio-button value="fhaz">Câmera de prevenção de riscos frontais</mat-radio-button>
@@ -56,14 +57,13 @@
 
 
 
-<mat-grid-list @fade cols="4" rowHeight="34rem" gutterSize="10px">
+<mat-grid-list *ngFor="let dateMars of data" @fade cols="4" rowHeight="34rem" gutterSize="10px">
     <mat-grid-tile>
-        <mat-card class="card">
-            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-                alt="Photo of a Shiba Inu">
+        <mat-card  class="card">
+             <img mat-card-image src="{{dateMars.photos}}" alt="Photo of a Shiba Inu">
             <mat-card-content>
-                <p>
-                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                 <p>
+                     The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
                     A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
                     bred for hunting.
                 </p>

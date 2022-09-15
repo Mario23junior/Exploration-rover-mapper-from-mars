@@ -33,13 +33,13 @@ export class MarsRoverserviceService {
     let dataResp = new Date(dataConvert);
     let dataFormt = (dataResp.getFullYear() + "-" + ((dataResp.getMonth() + 1)) + "-" + (dataResp.getDate()));
 
-    console.log(dataFormt)
 
     let urlCenter = (this.baseUrl + this.APICont + this.date + dataFormt + this.camera +
       marsCameras + this.marsSol + solMars + this.page + 1 + this.roboMars + roboRovesr)
 
+    
     let request = this.http.get<MarsRoverResponse[]>(urlCenter)
-    console.log(request)
+   
     return request
       .pipe(
         catchError(error => {
