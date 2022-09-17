@@ -34,7 +34,7 @@ export class MarsRoverserviceService {
     let dataFormt = (dataResp.getFullYear() + "-" + ((dataResp.getMonth() + 1)) + "-" + (dataResp.getDate()));
 
 
-    let urlCenter = (this.baseUrl + this.APICont + this.date + dataFormt + this.camera +
+    let urlCenter = (this.baseUrl + this.APICont + this.date + dataFormt + this.camera + 
       marsCameras + this.marsSol + solMars + this.page + 1 + this.roboMars + roboRovesr)
 
     

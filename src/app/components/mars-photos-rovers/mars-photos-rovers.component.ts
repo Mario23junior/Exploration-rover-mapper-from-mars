@@ -38,9 +38,13 @@ export class MarsPhotosRoversComponent implements OnInit {
 
   ConsultForDatePhoto() {
 
-    let valuesCarga = this.form.value
-  
-    this.service.findByDateBaseMars(valuesCarga.robomars , valuesCarga.date,valuesCarga.cameras,valuesCarga.solMars)
+    let roboRovesr = this.form.value.robomars
+    let data = this.form.value.date
+    let MarsCameras = this.form.value.cameras
+    let solMars = this.form.value.solMars
+    console.log(data)
+ 
+    this.service.findByDateBaseMars(roboRovesr, data, MarsCameras, solMars)
       .subscribe(data => {
         this.data = data
         console.log(data)
