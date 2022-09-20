@@ -19,12 +19,10 @@ import { MarsRoverserviceService } from 'src/app/service/mars-roverservice.servi
   ]
 })
 export class MarsPhotosRoversComponent implements OnInit {
-[x: string]: any;
-
+ 
   public form: FormGroup
   public data: MarsRoverResponse[] = []
-  public marsCam: MarsPhoto[] = []
-
+ 
   constructor(
     public formBuild: FormBuilder,
     public service: MarsRoverserviceService
