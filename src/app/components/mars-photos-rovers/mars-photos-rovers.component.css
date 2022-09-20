@@ -1,10 +1,10 @@
 .card {
     width: 30rem;
     margin: 1rem;
-     border-radius: 10px;
+    border-radius: 10px;
 }
 
- 
+
 img {
     width: 20rem;
 }
@@ -13,7 +13,7 @@ img {
     width: 40rem;
     margin-left: 15rem;
     margin-left: 22rem;
- }
+}
 
 
 .mat-button-toggle {
@@ -29,5 +29,5 @@ img {
 
 .example-full-width {
     width: 50%;
-    
+
 }
