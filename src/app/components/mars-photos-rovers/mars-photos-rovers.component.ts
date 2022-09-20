@@ -19,9 +19,12 @@ import { MarsRoverserviceService } from 'src/app/service/mars-roverservice.servi
   ]
 })
 export class MarsPhotosRoversComponent implements OnInit {
+[x: string]: any;
 
   public form: FormGroup
   public data: MarsRoverResponse[] = []
+  public marsCam: MarsPhoto[] = []
+
 
   
   constructor(
@@ -37,8 +40,8 @@ export class MarsPhotosRoversComponent implements OnInit {
     })
   }
 
-  ConsultForDatePhoto() {
 
+  ConsultForDatePhoto() {
     let roboRovesr = this.form.value.robomars
     let data = this.form.value.date
     let MarsCameras = this.form.value.cameras
