@@ -23,6 +23,7 @@ export class MarsPhotosRoversComponent implements OnInit {
   public form: FormGroup
   public data: MarsRoverResponse[] = []
 
+  
   constructor(
     public formBuild: FormBuilder,
     public service: MarsRoverserviceService
@@ -42,13 +43,12 @@ export class MarsPhotosRoversComponent implements OnInit {
     let data = this.form.value.date
     let MarsCameras = this.form.value.cameras
     let solMars = this.form.value.solMars
-    console.log(data)
- 
+  
     this.service.findByDateBaseMars(roboRovesr, data, MarsCameras, solMars)
       .subscribe(data => {
         this.data = data
         console.log(data)
-      })
+       })
   }
 
 

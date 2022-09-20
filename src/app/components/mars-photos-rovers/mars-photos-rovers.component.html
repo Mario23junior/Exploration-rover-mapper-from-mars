@@ -57,20 +57,20 @@
 
 
 <mat-grid-list *ngFor="let dateMars of data" @fade cols="4" rowHeight="34rem" gutterSize="10px">
+    <tr *ngFor="let marsPhoto of dateMars['photos']">
     <mat-grid-tile>
         <mat-card  class="card">
-             <img mat-card-image src="" alt="Photo of a Shiba Inu">
-            <mat-card-content>
+              <img mat-card-image src="{{marsPhoto.img_src}}" alt="Photo of a Shiba Inu">
+             <mat-card-content>
                  <p>
                      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                    bred for hunting.
-                </p>
-            </mat-card-content>
-            <mat-card-actions>
-                <button mat-button>LIKE</button>
-                <button mat-button>SHARE</button>
-            </mat-card-actions>
-        </mat-card>
-    </mat-grid-tile>
+                     A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                     bred for hunting.
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                </mat-card-actions>
+            </mat-card>
+        </mat-grid-tile>
+    </tr>    
 </mat-grid-list>
