@@ -25,21 +25,18 @@ export class MarsPhotosRoversComponent implements OnInit {
   public data: MarsRoverResponse[] = []
   public marsCam: MarsPhoto[] = []
 
-
-  
   constructor(
     public formBuild: FormBuilder,
     public service: MarsRoverserviceService
 
   ) {
     this.form = this.formBuild.group({
-      robomars: [null],
-      cameras: [null],
-      date: [null],
-      solMars: [null],
+      robomars: ['curiosity'],
+      cameras: ['fhaz'],
+      date: ['2012-11-18'],
+      solMars: [102],
     })
   }
-
 
   ConsultForDatePhoto() {
     let roboRovesr = this.form.value.robomars
