@@ -34,7 +34,7 @@ export class MarsPhotosRoversComponent implements OnInit {
       robomars: ['curiosity'],
       cameras: ['fhaz'],
       date: ['2012-11-18'],
-      solMars: [102],
+      solMars: [563],
     })
   }
 
