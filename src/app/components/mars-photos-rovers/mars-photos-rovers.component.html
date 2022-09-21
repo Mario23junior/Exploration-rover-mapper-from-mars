@@ -60,11 +60,7 @@
                 <mat-card class="card">
                     <mat-card-subtitle>{{marsPhoto.earth_date}}</mat-card-subtitle>
                     <img mat-card-image src="{{marsPhoto.img_src}}" alt="Photo of a Shiba Inu">
-                    <mat-card-content *ngFor="let item of marsPhoto.camera | keyvalue">
-                     <mat-list role="list">
-                        <mat-list-item role="listitem">{{item.value}}</mat-list-item>
-                      </mat-list>
-
+                    <mat-card-content>
                      </mat-card-content>
                 </mat-card>
             </mat-grid-tile>
